@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+  </head>
+
+  <body>
+    <p>Retinopathy severity = {{result}}</p>
+    <table>
+      <thead>
+        <th>Doctor Name</th>
+        <th>Contact Number</th>
+      </thead>
+      <tbody>
+        {% for doctor in doctors %}
+        <tr>
+          <td>{{doctor.name}}</td>
+          <td><a href="/contact/{{doctor.name}}">{{doctor.contact}}</a></td>
+        </tr>
+        {% endfor %}  
+      </tbody>
+  </table>
+  </body>
+
+</html>
