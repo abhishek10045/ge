@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        eye = request.form['eye']
-        result = getResult(eye)
+        eye_img = request.files['eye']
+        result = getResult(eye_img)
         if result in [0, 1]:
             return 'You are safe'
         else:

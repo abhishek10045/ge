@@ -11,10 +11,9 @@ def listDoctors():
         doctors.append(Doctor(chr(i) * 10, i ** 5))
     return doctors
 
-def getResult(eye):
-    print(eye)
+def getResult(eye_img):
     with open(MODEL_FILE, 'rb') as file:
-        classifier = Classifier(pickle.load(file))
-        # classifier.predict() # return this
-        return randint(0, 5)
+        # classifier = Classifier(pickle.load(file))
+        # return classifier.predict(eye_img)
+    return randint(0, 5)
     
